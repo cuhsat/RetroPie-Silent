@@ -7,13 +7,13 @@ $ ./retropie_silent.sh
 ```
 
 This will turn off the following outputs:
-- Kernel messages, warnings, logos and splash from [https://www.raspbian.org/](Raspian)
-- Splashscreen from [http://blog.petrockblock.com/retropie/](RetroPie)
-- Start/Stop messages from [http://www.emulationstation.org](EmulationStation)
-- On Screen Display from [http://www.libretro.com/](Libretro)
+* Kernel messages, warnings, logos and splash from [Raspian](https://www.raspbian.org)
+* Splashscreen from [RetroPie](http://blog.petrockblock.com/retropie/)
+* Start/Stop messages from [EmulationStation](http://www.emulationstation.org)
+* On Screen Display from [Libretro](http://www.libretro.com)
 
 This will also:
-- Force sound over HDMI
-- Force no boot delay
+* Force sound over HDMI
+* Turn off boot delay
 
 Have fun!
