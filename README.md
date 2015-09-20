@@ -23,12 +23,15 @@ This will turn off the following outputs
 * Loading messages
 
 ### [RetroPie](http://blog.petrockblock.com/retropie/)
-* Splashscreen (disables service)
+* Splash screen (disables service)
 
 ## Additional Options
 This will also set the following options
 * Force sound over HDMI
 * Turn off boot delay
+
+## Additional Files
+In case you want to disable the EmulationStation splash screen, please apply the `EmulationStation.diff` file to the source code before compiling it.
 
 ----
 Have fun!
