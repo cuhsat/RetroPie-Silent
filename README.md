@@ -15,6 +15,7 @@ This will turn off the following outputs
 * Voltage warnings
 * Temperature warnings
 * Rainbow splashscreen
+* Terminal blinking cursor
 
 ### [Libretro](http://www.libretro.com)
 * OSD (On Screen Display)
