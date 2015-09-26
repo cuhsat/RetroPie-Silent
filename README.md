@@ -17,11 +17,11 @@ This will turn off the following outputs
 * Rainbow splashscreen
 * Terminal blinking cursor
 
-### Libretro
-* OSD (On Screen Display)
-
 ### X11
 * Cursor
+
+### Libretro
+* OSD (On Screen Display)
 
 ### EmulationStation
 * Loading messages
