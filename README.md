@@ -9,7 +9,7 @@ $ ./retropie_silent.sh
 ## System Outputs
 This will turn off the following outputs
 
-### [Raspian](https://www.raspbian.org)
+### Raspian
 * Boot logo
 * Kernel messages
 * Voltage warnings
@@ -17,13 +17,16 @@ This will turn off the following outputs
 * Rainbow splashscreen
 * Terminal blinking cursor
 
-### [Libretro](http://www.libretro.com)
+### Libretro
 * OSD (On Screen Display)
 
-### [EmulationStation](http://www.emulationstation.org)
+### X11
+* Cursor
+
+### EmulationStation
 * Loading messages
 
-### [RetroPie](http://blog.petrockblock.com/retropie/)
+### RetroPie
 * Splash screen (disables service)
 
 ## Additional Options
@@ -33,10 +36,10 @@ This will also set the following options
 
 ## Additional Files
 ### SysVinit
-This repository also contains the files `shutdown.c.diff` and `initreq.h.diff` to remove any broadcast warnings from the `shutdown` command. *Never* apply these diffs to any multi user system!
+This repository also contains the files `shutdown.c.diff` and `initreq.h.diff` to remove any broadcast warnings from the `shutdown` command. *NEVER* apply these diffs to any multi-user system!
 
 ### EmulationStation
-This repository also contains the file `Window.cpp.diff` to remove the splash screen from EmulationStation (which normaly can not be disabled by design [1]).
+This repository also contains the file `Window.cpp.diff` to remove the splash screen from EmulationStation (which normally can not be disabled by design [1]).
 
 ----
 [1] https://github.com/Aloshi/EmulationStation/issues/203
