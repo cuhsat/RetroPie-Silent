@@ -32,7 +32,11 @@ This will also set the following options
 * Turn off boot delay
 
 ## Additional Files
-In case you want to disable the EmulationStation splash screen, please apply the `EmulationStation.diff` file to the source code before compiling it.
+### SysVinit
+This repository also contains the files `shutdown.c.diff` and `initreq.h.diff` to remove any broadcast warnings from the `shutdown` command. *Never* apply these diffs to any multi user system!
+
+### EmulationStation
+This repository also contains the file `Window.cpp.diff` to remove the splash screen from EmulationStation (which normaly can not be disabled by design [1]).
 
 ----
-Have fun!
+[1] https://github.com/Aloshi/EmulationStation/issues/203
