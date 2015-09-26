@@ -1,0 +1,82 @@
+diff --git a/shutdown.c b/shutdown.c
+index 7e997da..bc36301 100644
+--- a/shutdown.c
++++ b/shutdown.c
+@@ -211,29 +211,6 @@ int init_setenv(char *name, char *value)
+ 
+ 
+ /*
+- *	Tell everyone the system is going down in 'mins' minutes.
+- */
+-void warn(int mins)
+-{
+-	char buf[MESSAGELEN + sizeof(newstate)];
+-	int len;
+-
+-	buf[0] = 0;
+-	strncat(buf, message, sizeof(buf) - 1);
+-	len = strlen(buf);
+-
+-	if (mins == 0)
+-		snprintf(buf + len, sizeof(buf) - len,
+-			"\rThe system is going down %s NOW!\r\n",
+-			newstate);
+-	else
+-  		snprintf(buf + len, sizeof(buf) - len,
+-			"\rThe system is going DOWN %s in %d minute%s!\r\n",
+-				newstate, mins, mins == 1 ? "" : "s");
+-	wall(buf, 0);
+-}
+-
+-/*
+  *	Create the /etc/nologin file.
+  */
+ void donologin(int min)
+@@ -406,7 +383,6 @@ void shutdown(char *halttype)
+ 	int	do_halt = (down_level[0] == '0');
+ 
+ 	/* Warn for the last time */
+-	warn(0);
+ 	if (dontshut) {
+ 		hardsleep(1);
+ 		stopit(0);
+@@ -450,25 +426,6 @@ void shutdown(char *halttype)
+ }
+ 
+ /*
+- *	returns if a warning is to be sent for wt
+- */
+-static int needwarning(int wt)
+-{
+-	int ret;
+-
+-	if (wt < 10)
+-		ret = 1;
+-	else if (wt < 60)
+-		ret = (wt % 15 == 0);
+-	else if (wt < 180)
+-		ret = (wt % 30 == 0);
+-	else
+-		ret = (wt % 60 == 0);
+-
+-	return ret;
+-}
+-
+-/*
+  *	Main program.
+  *	Process the options and do the final countdown.
+  */
+@@ -746,13 +703,11 @@ int main(int argc, char **argv)
+ 	if (wt == 0) shutdown(halttype);
+ 
+ 	/* Give warnings on regular intervals and finally shutdown. */
+-	if (wt < 15 && !needwarning(wt)) warn(wt);
+ 	while(wt) {
+ 		if (wt <= 5 && !didnolog) {
+ 			donologin(wt);
+ 			didnolog++;
+ 		}
+-		if (needwarning(wt)) warn(wt);
+ 		hardsleep(60);
+ 		wt--;
+ 	}

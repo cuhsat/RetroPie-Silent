@@ -1,0 +1,13 @@
+diff --git a/initreq.h b/initreq.h
+index 757ffe0..b3438c1 100644
+--- a/initreq.h
++++ b/initreq.h
+@@ -28,7 +28,7 @@
+ #if defined(__FreeBSD_kernel__)
+ #  define INIT_FIFO  "/etc/.initctl"
+ #else
+-#  define INIT_FIFO  "/dev/initctl"
++#  define INIT_FIFO  "/run/initctl"
+ #endif
+ 
+ #define INIT_MAGIC 0x03091969
