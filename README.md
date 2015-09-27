@@ -36,12 +36,17 @@ This will also set the following options
 * Disables exit from EmulationStation
 
 ## Additional Files
+This repository also contains several diffs in case you want to recompile this packages.
 
 ### SysVinit
-This repository also contains the files `shutdown.c.diff` and `initreq.h.diff` to remove any broadcast warnings from the `shutdown` command. **Never** apply these diffs to any multi-user system or some people will punch you in the face!
+These diffs removes any broadcast warnings from the `shutdown` command.
+Never apply these diffs to any multi-user system or some people will punch you in the face!
+* `shutdown.c.diff`
+* `initreq.h.diff`
 
 ### EmulationStation
-This repository also contains the file `Window.cpp.diff` to remove the splash screen from EmulationStation (which normally can't be disabled by design [1]).
+* `Renderer_init_sdlgl.cpp` Disables the cursor earlier to prevent flicker
+* `Window.cpp.diff` - Removes the splash screen from EmulationStation (which normally can't be disabled by design [1])
 
 ----
 [1] https://github.com/Aloshi/EmulationStation/issues/203
