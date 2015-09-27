@@ -45,7 +45,7 @@ Never apply these diffs to any multi-user system or some people will punch you i
 * `initreq.h.diff`
 
 ### EmulationStation
-* `Renderer_init_sdlgl.cpp` Disables the cursor earlier to prevent flicker
+* `Renderer_init_sdlgl.cpp.diff` Disables the cursor earlier to prevent flicker
 * `Window.cpp.diff` - Removes the splash screen from EmulationStation (which normally can't be disabled by design [1])
 
 ----
