@@ -1,1 +1,1 @@
-[ "`tty`" = "/dev/tty1" ] && clear && emulationstation > /dev/null 2>&1
+[ "`tty`" = "/dev/tty1" ] && clear && emulationstation --no-exit > /dev/null 2>&1
