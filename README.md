@@ -23,18 +23,20 @@ This will turn off the following outputs
 ### Libretro
 * OSD (On Screen Display)
 
-### EmulationStation
-* Loading messages
-
 ### RetroPie
 * Splash screen (disables service)
 
+### EmulationStation
+* Loading messages
+
 ## Additional Options
 This will also set the following options
-* Force sound over HDMI
 * Turn off boot delay
+* Force sound over HDMI
+* Disables exit from EmulationStation
 
 ## Additional Files
+
 ### SysVinit
 This repository also contains the files `shutdown.c.diff` and `initreq.h.diff` to remove any broadcast warnings from the `shutdown` command. **Never** apply these diffs to any multi-user system or some people will punch you in the face!
 
