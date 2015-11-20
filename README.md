@@ -6,6 +6,8 @@ Please execute the following command line to silence various outputs:
 $ sudo ./retropie_silent.sh
 ```
 
+> **This is for a blank RetroPie installation, because it will override all previous settings!**
+
 ## System Outputs
 This will turn off the following outputs
 
