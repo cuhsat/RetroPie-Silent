@@ -1,15 +1,15 @@
 # RetroPie-Silent
-Basic configurations to silence all system outputs for RetroPie 3.0
+Basic configurations to silence all system outputs for RetroPie 3.0.
 
 Please execute the following command:
 ```
 $ sudo ./retropie_silent.sh
 ```
 
-> **This is for a blank RetroPie installation, because it will override all previous settings!**
+**This is for a blank RetroPie installation, because it will override all previous settings!**
 
 ## System Outputs
-This will turn off the following outputs
+This will turn off the following outputs:
 
 ### Raspian
 * Boot logo
