@@ -1,7 +1,7 @@
 # RetroPie-Silent
 Basic configurations to silence all system outputs for RetroPie 3.0
 
-Please execute the following command line to silence various outputs:
+Please execute the following command:
 ```
 $ sudo ./retropie_silent.sh
 ```
