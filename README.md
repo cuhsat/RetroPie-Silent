@@ -38,7 +38,7 @@ This will also set the following options
 * Disables exit from EmulationStation
 
 ## Additional Files
-This repository also contains several diffs in case you want to recompile this packages.
+This repository also contains several diffs in case you want to recompile these packages.
 
 ### SysVinit
 These diffs removes any broadcast warnings from the `shutdown` command.
